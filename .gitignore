@@ -1,0 +1,43 @@
+# Eclipse project files
+.project
+.classpath
+.settings/
+
+# Build output
+/bin/
+/build/
+/target/
+/out/
+
+# Java compiled files
+*.class
+
+# Logs and temp files
+*.log
+*.tmp
+*.bak
+*.swp
+*~
+
+# Tomcat working directory (if included)
+work/
+temp/
+
+# System-specific files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE-specific
+/.vscode/
+/.idea/
+/*.iml
+
+# Maven or Gradle output (if used in future)
+*.war
+*.ear
+*.jar
+
+# Environment/credentials (optional, if you store config here)
+*.properties
+*.env
