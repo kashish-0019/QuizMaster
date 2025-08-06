@@ -1,5 +1,6 @@
 package com.quiz.controller;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -12,12 +13,17 @@ import java.util.List;
 
 import com.quiz.db.DBHandler;
 import com.quiz.model.Question;
+import com.quiz.model.Result;
 import com.quiz.model.User;
 
 @WebServlet("/ResultServlet")
 public class ResultServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-		
+		DBHandler db = new DBHandler();
+		List<Result> results = db.getAllResults();
+		request.setAttribute("results", results);
+		RequestDispatcher rd = request.getRequestDispatcher("admin/viewAllResults.jsp");
+		rd.forward(request, response);
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

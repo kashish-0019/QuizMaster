@@ -15,7 +15,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Select Subject | QuizzMaster</title>
+    <title>Select Subject | QuizMaster</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -52,10 +52,10 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top shadow">
     <div class="container-fluid">
-        <a class="navbar-brand fw-bold fs-4" href="#">🧠 QuizzMaster</a>
+        <a class="navbar-brand fw-bold fs-4" href="#">🧠 QuizMaster</a>
         <div class="ms-auto">
             <span class="text-white me-2">Hi, <%= user.getName() %>!</span>
-            <a href="../LogoutServlet" class="btn btn-light btn-sm">Logout</a>
+            <a href="<%=request.getContextPath()%>/LogoutServlet" class="btn btn-danger btn-sm">Logout</a>
         </div>
     </div>
 </nav>

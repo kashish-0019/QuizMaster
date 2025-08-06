@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Login | QuizzMaster</title>
+  <title>Login | QuizMaster</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
@@ -36,7 +36,7 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top shadow">
   <div class="container-fluid">
-    <a class="navbar-brand fw-bold fs-4" href="#">🧠 QuizzMaster</a>
+    <a class="navbar-brand fw-bold fs-4" href="#">🧠 QuizMaster</a>
     <div class="ms-auto">
       <span class="text-white me-2">New here?</span>
       <a href="register.jsp" class="btn btn-light btn-sm">Register</a>
@@ -50,7 +50,7 @@
     <div class="card p-4">
       <div class="text-center mb-3">
         <h3 class="fw-bold">Login</h3>
-        <p class="text-muted">Access your QuizzMaster account</p>
+        <p class="text-muted">Access your QuizMaster account</p>
       </div>
       <form action="../LoginServlet" method="post">
         <div class="mb-3">

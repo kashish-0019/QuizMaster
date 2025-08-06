@@ -1,3 +1,4 @@
+<%@page import="com.quiz.model.User"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
@@ -6,7 +7,10 @@
     int correct = (int) session.getAttribute("correct");
     int incorrect = (int) session.getAttribute("incorrect");
     int score = (int) session.getAttribute("score");
-    
+   
+    User user = (User) session.getAttribute("currentuser");
+
+
     int percentage = (int)(((double)score / totalQuestions) * 100);
     String message = percentage >= 80 ? "🎉 Excellent Work!" : percentage >= 50 ? "👍 Good Job!" : "🙁 Keep Practicing!";
 %>
@@ -14,7 +18,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Quiz Result | QuizzMaster</title>
+    <title>Quiz Result | QuizMaster</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -66,7 +70,7 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top shadow">
   <div class="container-fluid">
-    <a class="navbar-brand fw-bold fs-4" href="#">🧠 QuizzMaster</a>
+    <a class="navbar-brand fw-bold fs-4" href="#">🧠 QuizMaster</a>
     <div class="ms-auto">
       <a href="dashboard.jsp" class="btn btn-light btn-sm">Dashboard</a>
     </div>

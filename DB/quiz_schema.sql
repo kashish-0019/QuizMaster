@@ -35,3 +35,10 @@ create table results(
   foreign key (user_id) references users(user_id),
   foreign_key (subject_id) references subjects(subject_id)
 );
+
+CREATE TABLE admin (
+    admin_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(100) UNIQUE,
+    password VARCHAR(100)
+);

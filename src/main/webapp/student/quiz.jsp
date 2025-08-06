@@ -6,13 +6,14 @@
     List<Question> questions = (List<Question>) session.getAttribute("questions");
     int subject_id = (int) session.getAttribute("subject_id");
     String subject_name = (String) session.getAttribute("subjectName");
+    
 %>
 
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
-  <title><%= subject_name %> Quiz | QuizzMaster</title>
+  <title><%= subject_name %> Quiz | QuizMaster</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
@@ -58,6 +59,8 @@
     <a class="navbar-brand fw-bold fs-4" href="#">🧠 QuizzMaster</a>
   </div>
 </nav>
+
+
 
 <!-- Quiz Form -->
 <div class="container" style="margin-top: 100px;">

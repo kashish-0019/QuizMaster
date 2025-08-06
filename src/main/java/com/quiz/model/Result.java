@@ -7,6 +7,8 @@ public class Result {
     private int score;
     private String quizDate;
     private String subjectName;
+    private User user;        
+    private Subject subject;
 	public int getId() {
 		return id;
 	}
@@ -42,6 +44,21 @@ public class Result {
     }
     public void setSubjectName(String subjectName) {
         this.subjectName = subjectName;
+    }
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Subject getSubject() {
+        return subject;
+    }
+
+    public void setSubject(Subject subject) {
+        this.subject = subject;
     }
     public Result(int id, int userId, int subjectId, int score, String quizDate, String subjectName) {
         this.id = id;

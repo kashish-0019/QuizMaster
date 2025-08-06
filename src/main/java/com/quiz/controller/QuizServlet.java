@@ -30,6 +30,8 @@ public class QuizServlet extends HttpServlet {
           List<Question> questions = db.getQuestionsBySubjectId(subjectId);
           Subject subject = db.getSubjectById(subjectId);
           
+          if(questions.size() >= 10) {
+          
           HttpSession session = request.getSession();
           session.setAttribute("questions", questions);
           session.setAttribute("subject_id", subjectId);
@@ -37,6 +39,12 @@ public class QuizServlet extends HttpServlet {
           
           RequestDispatcher rd = request.getRequestDispatcher("student/quiz.jsp");
           rd.forward(request,response);
+          }else {
+        	  String message = "The Quiz is currently unavailable. Please try again later!";
+        	  request.setAttribute("message", message);
+        	  RequestDispatcher rd = request.getRequestDispatcher("error.jsp");
+              rd.forward(request,response);
+          }
 	}
 
 }
